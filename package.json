@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "dev:tsx": "cross-env tsx src/main.ts",
+    "dev:ts-node": "cross-env node --loader ts-node/esm src/main.ts",
     "devturbo": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbo",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
@@ -42,7 +43,9 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-beta.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.0.0-rc.0",
-    "typescript": "5.5.2"
+    "typescript": "5.5.2",
+    "tsx": "^4.15.7",
+    "ts-node": "^10.9.2"
   },
   "pnpm": {
     "overrides": {
@@ -53,5 +56,6 @@
   "overrides": {
     "@types/react": "npm:types-react@19.0.0-beta.2",
     "@types/react-dom": "npm:types-react-dom@19.0.0-beta.2"
-  }
+  },
+  "packageManager": "pnpm@8.7.5+sha1.735d4d0e6fc66c4d2d64b269b08e5995b19230ca"
 }
