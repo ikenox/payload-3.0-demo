@@ -7,6 +7,8 @@
     "dev": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next dev",
     "devturbo": "pnpm dev --turbo",
     "devsafe": "rm -rf .next && pnpm dev",
+    "dev:tsx": "cross-env tsx src/main.ts",
+    "dev:ts-node": "cross-env node --loader ts-node/esm src/main.ts",
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
@@ -29,6 +31,7 @@
     "@payloadcms/ui": "3.0.0-beta.90",
     "babel-plugin-react-compiler": "0.0.0-experimental-48eb8f4-20240822",
     "cross-env": "^7.0.3",
+    "express": "^4.19.2",
     "graphql": "^16.8.2",
     "next": "15.0.0-canary.104",
     "payload": "3.0.0-beta.90",
@@ -43,7 +46,10 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.0.0-canary.104",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "@types/express": "^4.17.21",
+    "tsx": "^4.15.7",
+    "ts-node": "^10.9.2"
   },
   "pnpm": {
     "overrides": {
@@ -54,5 +60,6 @@
   "overrides": {
     "@types/react": "npm:types-react@19.0.0-rc.0",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0"
-  }
+  },
+  "packageManager": "pnpm@8.7.5+sha1.735d4d0e6fc66c4d2d64b269b08e5995b19230ca"
 }
